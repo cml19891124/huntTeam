@@ -1,0 +1,272 @@
+//
+//  PrefixHeader.pch
+//  Lottery
+//
+//  Created by YIQI on 2018/3/23.
+//  Copyright © 2018年 zhong. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "SDLoginModel.h"
+
+#import "SDUserTool.h"
+
+#import <QMUIKit.h>
+
+//#define isIphone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+//#define isIphone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+//#define isIphone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+//#define isIphone6p ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+//#define isIphoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define isIphone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define isIphone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define isIphone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) || CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size)) : NO)
+
+#define isIphone6p ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(1125, 2001), [[UIScreen mainScreen] currentMode].size) || CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size)) : NO)
+
+#define isIphone7p ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? (CGSizeEqualToSize(CGSizeMake(1920, 1080), [[UIScreen mainScreen] currentMode].size) || CGSizeEqualToSize(CGSizeMake(1920, 1080), [[UIScreen mainScreen] currentMode].size)) : NO)
+
+#define isIphoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define IS_IPAD   (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPad)
+
+#define IOS11_OR_LATER ([[[UIDevice currentDevice] systemVersion] compare:@"11.0"] != NSOrderedAscending)
+#define IOS10_OR_LATER ([[[UIDevice currentDevice] systemVersion] compare:@"10.0"] != NSOrderedAscending)
+#define IOS9_OR_LATER ([[[UIDevice currentDevice] systemVersion] compare:@"9.0"] != NSOrderedAscending)
+#define IOS8_OR_LATER ([[[UIDevice currentDevice] systemVersion] compare:@"8.0"] != NSOrderedAscending)
+#define IOS7_OR_LATER ([[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending)
+#define IOS6_OR_LATER ([[[UIDevice currentDevice] systemVersion] compare:@"6.0"] != NSOrderedAscending)
+#define IOS5_OR_LATER ([[[UIDevice currentDevice] systemVersion] compare:@"5.0"] != NSOrderedAscending)
+#define IOS4_OR_LATER ([[[UIDevice currentDevice] systemVersion] compare:@"4.0"] != NSOrderedAscending)
+#define IOS3_OR_LATER ([[[UIDevice currentDevice] systemVersion] compare:@"3.0"] != NSOrderedAscending)
+
+#define IOS_SYSTEM_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+
+//客户端相关信息
+#define kSystemInfo [UserCenter defaultCenter].systemInfo
+
+//获取当前语言
+#define CurrentLanguage  ([[NSLocale preferredLanguages ] objectAtIndex:0])
+
+//判断是否为空
+#define IsNilOrNull(_ref)  (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) || ([(_ref) isEqual:@"null"]) || ([(_ref) isEqual:@"(null)"]))
+
+#define IsStrEmpty(_ref)  (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) || ([(_ref) isEqualToString:@""]))
+
+#define IsArrEmpty(_ref)  (((_ref) == nil) || ([(_ref) isEqual:[NSNull null]]) || ([(_ref) count] == 0))
+
+#define IMAGE_NAMED(name) [UIImage imageNamed:name]
+#define BoundWithSize(str,width,font)   ([str boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:font]} context:nil])
+
+#define kDeviceWidth  ([UIScreen mainScreen].bounds.size.width)
+#define kDeviceHeight  ([UIScreen mainScreen].bounds.size.height)
+#define kCurrentWidth(x) ([UIScreen mainScreen].bounds.size.width/375.0)*x
+#define kCurrentWidth(x) ([UIScreen mainScreen].bounds.size.width/375.0)*x
+#define kNavigationBarViewHeight  44.0
+#define kTabBarViewHeight  ((!isIphone5 && !isIphone4 && !isIphone6 && !isIphone6p)  ? (49.0+34.0) : 49.0)
+#define kViewHeight  ((!isIphone5 && !isIphone4 && !isIphone6 && !isIphone6p) ? 34.0 : 0)
+#define kNavBarHeight  ((!isIphone5 && !isIphone4 && !isIphone6 && !isIphone6p && !isIphone7p)  ? 88.0 : 64.0)
+#define kStatusBarViewHeight ((!isIphone5 && !isIphone4 && !isIphone6 && !isIphone6p)  ? 44.0 : 20.0)
+
+//#define kTabBarViewHeight  (isIphoneX ? (49.0+34.0) : 49.0)
+//#define kViewHeight  (isIphoneX ? 34.0 : 0)
+//#define kStatusBarViewHeight (isIphoneX ? 44.0 : 20.0)
+//#define kNavBarHeight  (isIphoneX ? 88.0 : 64.0)
+
+#define kClearColor       [UIColor clearColor]
+#define kWhiteColor       [UIColor whiteColor]
+#define kBlackColor       [UIColor blackColor]
+#define kDarkGrayColor    [UIColor darkGrayColor]
+#define kLightGrayColor   [UIColor lightGrayColor]
+#define kGrayColor        [UIColor grayColor]
+#define kRedColor         [UIColor redColor]
+#define kGreenColor       [UIColor greenColor]
+#define kBlueColor        [UIColor blueColor]
+#define kCyanColor        [UIColor cyanColor]
+#define kYellowColor      [UIColor yellowColor]
+#define kMagentaColor     [UIColor magentaColor]
+#define kOrangeColor      [UIColor orangeColor]
+#define kPurpleColor      [UIColor purpleColor]
+#define kBrownColor       [UIColor brownColor]
+
+#define kBackgroundColor      [UIColor colorWithHexString:@"F4F4F4"]
+#define kSepparteLineColor    [UIColor colorWithHexString:@"dddddd"]
+#define kLBRedColor           [UIColor colorWithHexString:@"00ADEF"]
+#define kLBBlackColor         [UIColor colorWithHexString:@"111111"]
+#define kLBThreeColor         [UIColor colorWithHexString:@"333333"]
+#define kLBFiveColor          [UIColor colorWithHexString:@"555555"]
+#define kLBSixColor           [UIColor colorWithHexString:@"666666"]
+#define kLBNineColor          [UIColor colorWithHexString:@"999999"]
+
+#define RGBCOLOR(r,g,b)  [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1]
+#define RGB1COLOR(r,g,b,a)  [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+
+//rgb颜色转换（16进制->10进制）
+#define UIColorFromRGB(rgbValue)  [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0f green:((float)((rgbValue & 0xFF00) >> 8))/255.0f blue:((float)(rgbValue & 0xFF))/255.0f alpha:(1)]
+
+
+#define kSystem(size)  [UIFont systemFontOfSize:size]
+#define kFontWithSize(size)  [UIFont systemFontOfSize:size]
+#define kSystemBold(size) [UIFont boldSystemFontOfSize:size]
+#define kBoldFontWithSize(size) [UIFont boldSystemFontOfSize:size]
+
+#define k16RGBColor(rgbValue) \
+[UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16)) / 255.0 \
+green:((float)((rgbValue & 0xFF00) >> 8)) / 255.0 \
+blue:((float)(rgbValue & 0xFF)) / 255.0 alpha:1.0]
+
+#define WeakSelf  __weak typeof(self)weakSelf = self;
+#define KSTRONG_SELF __strong typeof(weakSelf) strongSelf = weakSelf;
+
+#define WXappKey @"wxfff2d87111af1d53"
+#define WXappSecret @"b7e24a8522266b53ed113382789fd29f"
+//#define WXappKey @"wx8c3dbb5282589c19"
+//#define WXappSecret @"4c56d875fa38b0164bc49bb6a5e1080a"
+#define RongIMAppKey @"kj7swf8ok19u2"
+//#define RongIMAppSecret @"kj7swf8ok19u2"
+
+//ik1qhw09iptcp
+
+// 用户信息
+#define kRCUSERINFO           @"RCUSERINFO"
+// 身份证图片
+#define kSHENFENGZHENGICON           @"SHENFENGZHENGICON "
+
+// 极光
+#define kAppKey_JPush           @"088a5bb368be0f98a942b52e"
+
+//h5下载也
+#define kLIEBANGHTML           @"http://liebangapp.com/app/"
+//线上appid
+#define kAppId  @"1449541041"
+
+//#define kApphttp @"HTTP://192.168.1.130:8080/v1/"//本地
+//#define kApphttp @"http://193.112.144.57:8080/liebang/v1/"//线上IP
+//#define kApphttp @"http://liebangapp.com:8080/v1/"//ipv4
+#define kApphttp @"http://api.liebangapp.com/liebang/v1/"//ipv6
+//#define kApphttp @"http://192.168.31.234:8080/v1/"//本地刘强服务器
+
+#define MAX_LIMIT_NUMS 2000
+typedef void (^SNBasicBlock)(void);
+//com.yiqi.LIEBANG
+
+#if !defined(SN_EXTERN)
+#  if defined(__cplusplus)
+#    define SN_EXTERN extern "C"
+#  else
+#    define SN_EXTERN extern
+#  endif
+#endif
+#endif
+
+
+#ifdef __OBJC__
+
+#import "AppDelegate.h"
+
+#pragma mark - 原生库
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import "SDHTTPSever.h"
+
+#pragma mark - 第三方库
+#import "AFNetworking.h"
+#import "BRPickerView.h"
+#import "BRPickerViewMacro.h"
+#import "SDImageCache.h"
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+#import "MJRefresh.h"
+#import "MBProgressHUD.h"
+#import <WebKit/WebKit.h>
+#import <QiniuSDK.h>
+#import "YYModel.h"
+#import <AlipaySDK/AlipaySDK.h>
+#import "WechatSDK1.8.2/WXApi.h"
+#import "WXApiManager.h"
+#import "RegexManager.h"
+#import "NSObject+YYModel.h"
+#import <RongIMKit/RongIMKit.h>
+#import <RongIMLib/RongIMLib.h>
+#import "Masonry.h"
+#import "GRStarView.h"
+#import "GRStarsView.h"
+#import "SPDateTimePickerView.h"
+#import <UMShare/UMShare.h>
+#import <UMCommon/UMCommon.h>
+#import <UShareUI/UShareUI.h>
+#import <JPUSHService.h>
+#import "FMDatabase.h"
+#import <CoreData/CoreData.h>
+#import "NSObject+Cache.h"
+#import "RCDataManager.h"
+#import "SDCycleScrollView.h"
+//#import "TZImagePickerController.h"
+//#import <ZLPhotoActionSheet.h>
+
+#pragma mark - 库扩展
+#import "UIColor+Addition.h"
+#import "UIButton+Extensions.h"
+#import "NSDictionary+Extensional.h"
+#import "NSArray+Extensional.h"
+#import "NSArray+SNFoundation.h"
+#import "UIView+Frame.h"
+#import "UIImage+Addition.h"
+#import "NSString+Addition.h"
+#import "NSString+NumberSplit.h"
+#import "NSDate+Utilities.h"
+#import "NSArray+Additions.h"
+#import "NSString+PinYin.h"
+#import "CommonViewController+Mosaic.h"
+#import "UIImage+Addition.h"
+
+#pragma mark - 公共宏，常量等配置
+#import "SimpleNSLog.h"
+#import "TypedefConstant.h"
+#import "RequestUrl.h"
+#import "Config.h"
+#import "LBForProject.h"
+
+#pragma mark - 数据模型，网络请求等
+#import "InsureValidate.h"
+#import "Calculagraph.h"
+#import "HttpClient.h"
+#import "MineService.h"
+#import "MD5.h"
+
+#pragma mark - UI
+#import "ConfimButton.h"
+#import "CHAlertView.h"
+#import "CommonViewController.h"
+#import "CommonNavgationViewController.h"
+#import "WebViewController.h"
+#import "LoginViewController.h"
+#import "SectionHeadView.h"
+#import "AccountViewController.h"
+#import "PayViewController.h"
+#import "NoDataView.h"
+#import "PriceLabel.h"
+#import "YYLabel.h"
+#import "NSAttributedString+YYText.h"
+#import "NameLabel.h"
+#import "PostionLabel.h"
+#import "CommentPickView.h"
+#import "MyFriendViewController.h"
+#import "RechargeProtrolViewController.h"
+#import "YCMenuView.h"
+#import "JJImagePicker.h"
+#import "HXPhotoPicker.h"
+#import "HXPhotoTools.h"
+
+#pragma mark 融云
+#import "RCDUserInfo.h"
+#import "WMCardMessage.h"
+#import "WMContent.h"
+
+#endif /* PrefixHeader_pch */
