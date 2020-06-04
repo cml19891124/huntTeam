@@ -19,11 +19,13 @@
 #import "PostScoreView.h"
 #import "MeetCell.h"
 
-@interface OrderDetailViewController ()
+#import <WebKit/WebKit.h>
+
+@interface OrderDetailViewController ()<WKNavigationDelegate,WKUIDelegate>
 
 @property (nonatomic,strong)OrderDetailButton *detailButton;
 @property (nonatomic,strong)ThemeOrderDetailModel *detailModel;
-@property (nonatomic,strong)UIWebView *callWebView;
+@property (nonatomic,strong) WKWebView *callWebView;
 @property (nonatomic,strong)PostScoreView *scoreView;
 @property (nonatomic,strong)CommentPickView *pickview;
 
@@ -350,20 +352,51 @@
     }
 }
 
+- (WKWebView *)callWebView
+{
+    if (!_callWebView) {
+        _callWebView = [[WKWebView alloc] init];
+        // UI代理
+        _callWebView.UIDelegate = self;
+        // 导航代理
+        _callWebView.navigationDelegate = self;
+    }
+    return _callWebView;
+}
+
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+
+    NSURL *URL = navigationAction.request.URL;
+
+    NSString *scheme = [URL scheme];
+
+    if ([scheme isEqualToString:@"tel"]) {
+
+    NSString *resourceSpecifier = [URL resourceSpecifier];
+
+    NSString *callPhone = [NSString stringWithFormat:@"telprompt:%@", resourceSpecifier];
+
+    /// 防止iOS 10及其之后，拨打电话系统弹出框延迟出现
+
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:callPhone]];
+
+    });
+
+    }
+
+    decisionHandler(WKNavigationActionPolicyAllow);
+
+}
+
+
 - (BOOL)checkHardWareIsSupportCallHotLine
 {
     BOOL isSupportTel = NO;
     NSURL *telURL = [NSURL URLWithString:[NSString stringWithFormat:@"tel://%@",self.detailModel.userPhone]];
     isSupportTel = [[UIApplication sharedApplication] canOpenURL:telURL];
     return isSupportTel;
-}
-
-- (UIWebView *)callWebView
-{
-    if (!_callWebView) {
-        _callWebView = [[UIWebView alloc] init];
-    }
-    return _callWebView;
 }
 
 #pragma mark Event

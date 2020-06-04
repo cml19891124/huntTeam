@@ -11,32 +11,6 @@
 @implementation WalletService
 
 /**
- 充值
- */
-+ (void)getRechargeWithParameters:(NSMutableDictionary *)parameters
-                          success:(void (^)(PayModel *data))success
-                          failure:(void (^)(NSUInteger code,NSString *errorStr))failure
-{
-    [HttpClient sendPostRequest:kRECHARGE_URL parameters:parameters success:^(id responseObject) {
-        NSString *ret = [responseObject objectForKey:@"info"];
-        if ([ret integerValue] == 200) {
-            PayModel *model = [PayModel yy_modelWithJSON:[responseObject objectForKey:@"data"]];
-            if (success) {
-                success(model);
-            }
-        } else {
-            if (failure) {
-                failure([ret integerValue],[responseObject objectForKey:@"msg"]);
-            }
-        }
-    } failure:^(NSUInteger statusCode, NSString *error) {
-        if (failure) {
-            failure(statusCode,@"连接异常，请检查您的网络");
-        }
-    }];
-}
-
-/**
  钱包列表
  */
 + (void)getWalletWithParameters:(NSMutableDictionary *)parameters
@@ -49,55 +23,6 @@
             WalletListModel *dto = [WalletListModel yy_modelWithJSON:[responseObject objectForKey:@"data"]];
             if (success) {
                 success(dto);
-            }
-        } else {
-            if (failure) {
-                failure([ret integerValue],[responseObject objectForKey:@"msg"]);
-            }
-        }
-    } failure:^(NSUInteger statusCode, NSString *error) {
-        if (failure) {
-            failure(statusCode,@"连接异常，请检查您的网络");
-        }
-    }];
-}
-
-/**
- 是否绑定微信
- */
-+ (void)getIsWechatWithSuccess:(void (^)(NSString *info))success
-                       failure:(void (^)(NSUInteger code,NSString *errorStr))failure
-{
-    [HttpClient sendPostRequest:kIS_WECHAT_URL parameters:nil success:^(id responseObject) {
-        NSString *ret = [responseObject objectForKey:@"info"];
-        if ([ret integerValue] == 200) {
-            if (success) {
-                success([responseObject objectForKey:@"data"]);
-            }
-        } else {
-            if (failure) {
-                failure([ret integerValue],[responseObject objectForKey:@"msg"]);
-            }
-        }
-    } failure:^(NSUInteger statusCode, NSString *error) {
-        if (failure) {
-            failure(statusCode,@"连接异常，请检查您的网络");
-        }
-    }];
-}
-
-/**
- 提现
- */
-+ (void)getWithDrawWithParameters:(NSMutableDictionary *)parameters
-                          success:(void (^)(id data))success
-                          failure:(void (^)(NSUInteger code,NSString *errorStr))failure
-{
-    [HttpClient sendPostRequest:kFORWARD_URL parameters:parameters success:^(id responseObject) {
-        NSString *ret = [responseObject objectForKey:@"info"];
-        if ([ret integerValue] == 200) {
-            if (success) {
-                success(responseObject[@"data"][@"status"]);
             }
         } else {
             if (failure) {

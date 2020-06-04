@@ -15,7 +15,6 @@ typedef enum{
     EditPhoneStateNormal                                 = 0,//绑定手机号
     EditPhoneStateModifyOne                              = 1,//修改手机号1
     EditPhoneStateModifyTwo                              = 2,//修改手机号2
-    EditPhoneStateModifyAli                              = 3,//支付宝提现
 }EditPhoneState;
 
 @interface EditPhoneViewController : CommonViewController

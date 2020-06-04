@@ -7,7 +7,7 @@
 //
 
 #import "EditPhoneViewController.h"
-#import "BindZFBViewController.h"
+
 #import "LoginService.h"
 
 @interface EditPhoneViewController ()<UITextFieldDelegate>
@@ -56,7 +56,7 @@
 #pragma mark Event
 - (void)sureButtonClick {
     
-    if (self.editPhoneState == EditPhoneStateModifyOne || self.editPhoneState == EditPhoneStateModifyAli) {
+    if (self.editPhoneState == EditPhoneStateModifyOne) {
         
     }
     else {
@@ -137,31 +137,12 @@
             [self presentSheet:errorStr];
         }];
     }
-    else if (self.editPhoneState == EditPhoneStateModifyAli) {//支付宝提现
-        NSMutableDictionary *postDic = [NSMutableDictionary dictionary];
-        [postDic setValue:[Config currentConfig].mobile forKey:@"userPhone"];
-        [postDic setValue:_codeTextField.text forKey:@"code"];
-        NSLog(@"支付宝提现验证手机 = %@",postDic);
-        [self displayOverFlowActivityView];
-        [LoginService getCheckCodeWithParameters:postDic success:^(NSString *success) {
-            [self removeOverFlowActivityView];
-            [self presentSheet:success];
-            [self performBlock:^{
-                BindZFBViewController *nextCtr = [[BindZFBViewController alloc] init];
-                [nextCtr ExtractWithMoney:self.yuer];
-                [self.navigationController pushViewController:nextCtr animated:YES];
-            } afterDelay:1.5];
-        } failure:^(NSUInteger code, NSString *errorStr) {
-            [self removeOverFlowActivityView];
-            [self presentSheet:errorStr];
-        }];
-    }
 }
 
 - (void)codeButtonClick {
     
     NSMutableDictionary *postDic = [NSMutableDictionary dictionary];
-    if (self.editPhoneState == EditPhoneStateModifyOne  || self.editPhoneState == EditPhoneStateModifyAli) {
+    if (self.editPhoneState == EditPhoneStateModifyOne) {
         [postDic setValue:[Config currentConfig].mobile forKey:@"userPhone"];
     }
     else {
@@ -265,13 +246,6 @@
         self.navigationItem.title = @"修改手机号";
         
         _headView = [[SectionHeadView alloc] initWithFrame:CGRectMake(0, 0, kDeviceWidth, kCurrentWidth(44)) title:@"请获取短信验证码，并修改手机号码"];
-        [self.view addSubview:_headView];
-    }
-    else if (self.editPhoneState == EditPhoneStateModifyAli) {
-        self.navigationItem.title = @"支付宝提现";
-        _headView = [[SectionHeadView alloc] initWithFrame:CGRectMake(0, 0, kDeviceWidth, kCurrentWidth(44)) title:@"为保证提现安全，请验证手机号码"];
-        _phoneTextField.text = [InsureValidate phonenum:[Config currentConfig].mobile];
-        _phoneTextField.enabled = NO;
         [self.view addSubview:_headView];
     }
 }

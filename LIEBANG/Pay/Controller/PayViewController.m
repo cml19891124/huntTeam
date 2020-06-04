@@ -245,33 +245,7 @@
             [self removeOverFlowActivityView];
             self.payOrderUid = info;
             [self getOrderPayResult:info];
-//            if (self.selectIndex == 0) {//支付宝
-//                NSString *appScheme = @"LIEBANGYIQI";
-//
-//                [[AlipaySDK defaultService] payOrder:info.alipay_url fromScheme:appScheme callback:^(NSDictionary *resultDic) {
-//
-//                    if (resultDic && [resultDic objectForKey:@"resultStatus"] && ([[resultDic objectForKey:@"resultStatus"] intValue] == 9000)) {
-//                        [self getOrderPayResult:nil];
-//                    } else {
-//                        [self presentSheet:@"支付失败"];
-//                    }
-//                }];
-//            }
-//            else if (self.selectIndex == 1) {//微信
-//                //调起微信支付
-//                PayReq* req             = [[PayReq alloc] init];
-//                req.partnerId           = info.partnerid;
-//                req.prepayId            = info.prepayid;
-//                req.nonceStr            = info.noncestr;
-//                req.timeStamp           = info.timestamp.intValue;
-//                req.package             = info.package;
-//                req.sign                = info.sign;
-//                [WXApi sendReq:req];
-//            }
-//            else if (self.selectIndex == 2) {//账户余额
-//                [self getOrderPayResult:info.id];
-//            }
-            
+
         } failure:^(NSUInteger code, NSString *errorStr) {
             [self removeOverFlowActivityView];
             [self presentSheet:errorStr];
@@ -296,31 +270,7 @@
         [CompanyService payCompanyWithParameters:postDic success:^(PayModel * _Nonnull data) {
             [self removeOverFlowActivityView];
             [self getCompanyPayResult];
-//            if (self.selectIndex == 0) {//支付宝
-//                NSString *appScheme = @"LIEBANGYIQI";
-//                [[AlipaySDK defaultService] payOrder:data.alipay_url fromScheme:appScheme callback:^(NSDictionary *resultDic) {
-//
-//                    if (resultDic && [resultDic objectForKey:@"resultStatus"] && ([[resultDic objectForKey:@"resultStatus"] intValue] == 9000)) {
-//                        [self getOrderPayResult:nil];
-//                    } else {
-//                        [self presentSheet:@"支付失败"];
-//                    }
-//                }];
-//            }
-//            else if (self.selectIndex == 1) {//微信
-//                //调起微信支付
-//                PayReq* req             = [[PayReq alloc] init];
-//                req.partnerId           = data.partnerid;
-//                req.prepayId            = data.prepayid;
-//                req.nonceStr            = data.noncestr;
-//                req.timeStamp           = data.timestamp.intValue;
-//                req.package             = data.package;
-//                req.sign                = data.sign;
-//                [WXApi sendReq:req];
-//            }
-//            else if (self.selectIndex == 2) {//账户余额
-//                [self getCompanyPayResult];
-//            }
+
         } failure:^(NSUInteger code, NSString * _Nonnull errorStr) {
             [self removeOverFlowActivityView];
             [self presentSheet:errorStr];

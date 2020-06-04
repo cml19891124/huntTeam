@@ -1,22 +1,16 @@
-//
-//  AboutLBViewController.m
-//  LIEBANG
-//
-//  Created by  YIQI on 2018/9/14.
-//  Copyright © 2018年  YIQI. All rights reserved.
-//
+#import <WebKit/WebKit.h>
 
 #import "AboutLBViewController.h"
 
 static NSArray *messageArray;
 static NSArray *imageArray;
-@interface AboutLBViewController ()
+@interface AboutLBViewController ()<WKUIDelegate,WKNavigationDelegate>
 
 @property (nonatomic,strong)UIView *headView;
 @property (nonatomic,strong)UIImageView *logo;
 @property (nonatomic,strong)UILabel *versionLabel;
 @property (nonatomic,strong)UILabel *messageLabel;
-@property (nonatomic,strong)UIWebView *callWebView;
+@property (nonatomic,strong) WKWebView *callWebView;
 
 @end
 
@@ -106,12 +100,42 @@ static NSArray *imageArray;
     return isSupportTel;
 }
 
-- (UIWebView *)callWebView
+- (WKWebView *)callWebView
 {
     if (!_callWebView) {
-        _callWebView = [[UIWebView alloc] init];
+        _callWebView = [[WKWebView alloc] init];
+        // UI代理
+        _callWebView.UIDelegate = self;
+        // 导航代理
+        _callWebView.navigationDelegate = self;
     }
     return _callWebView;
+}
+
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+
+    NSURL *URL = navigationAction.request.URL;
+
+    NSString *scheme = [URL scheme];
+
+    if ([scheme isEqualToString:@"tel"]) {
+
+    NSString *resourceSpecifier = [URL resourceSpecifier];
+
+    NSString *callPhone = [NSString stringWithFormat:@"telprompt:%@", resourceSpecifier];
+
+    /// 防止iOS 10及其之后，拨打电话系统弹出框延迟出现
+
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:callPhone]];
+
+    });
+
+    }
+
+    decisionHandler(WKNavigationActionPolicyAllow);
+
 }
 
 #pragma mark HeadView

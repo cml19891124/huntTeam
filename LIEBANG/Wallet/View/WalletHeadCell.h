@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface WalletHeadCell : UITableViewCell
 
 @property(nonatomic,copy)void(^rechargeButtonBlock)(void);
-@property(nonatomic,copy)void(^forwardButtonBlock)(void);
+
 @property(nonatomic,strong)NSIndexPath *indexPath;
 
 @end

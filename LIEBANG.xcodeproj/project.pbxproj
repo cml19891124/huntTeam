@@ -53,7 +53,6 @@
 		5D11A84721095E9300F500C0 /* ExpertListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D11A84621095E9300F500C0 /* ExpertListViewController.m */; };
 		5D11A84A21095EA000F500C0 /* ExpertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D11A84921095EA000F500C0 /* ExpertViewController.m */; };
 		5D11A84D21096CCE00F500C0 /* SearchExpertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D11A84C21096CCE00F500C0 /* SearchExpertViewController.m */; };
-		5D11A85021098A0400F500C0 /* PayPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D11A84F21098A0400F500C0 /* PayPickView.m */; };
 		5D11A8532109C09D00F500C0 /* ORCertiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D11A8522109C09D00F500C0 /* ORCertiViewController.m */; };
 		5D11A8562109C0B400F500C0 /* GRCertiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D11A8552109C0B400F500C0 /* GRCertiViewController.m */; };
 		5D11A8592109C33600F500C0 /* TextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D11A8582109C33600F500C0 /* TextFieldCell.m */; };
@@ -65,7 +64,6 @@
 		5D1246E2211A8D6800637BD3 /* EditPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1246E1211A8D6800637BD3 /* EditPhoneViewController.m */; };
 		5D1246E5211AFAC700637BD3 /* PayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1246E4211AFAC700637BD3 /* PayModel.m */; };
 		5D1246E8211AFB1400637BD3 /* PayHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1246E7211AFB1400637BD3 /* PayHeadView.m */; };
-		5D12AFE12147630000D4F00C /* PayTypePickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D12AFE02147630000D4F00C /* PayTypePickView.m */; };
 		5D12AFE521479AAA00D4F00C /* SPDateTimePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D12AFE421479AAA00D4F00C /* SPDateTimePickerView.m */; };
 		5D12AFE82147B1D600D4F00C /* BlackFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D12AFE72147B1D600D4F00C /* BlackFriendCell.m */; };
 		5D12AFF82148A78F00D4F00C /* libSocialQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D12AFEC2148A78E00D4F00C /* libSocialQQ.a */; };
@@ -145,7 +143,6 @@
 		5D2E9FD2210708FD00BB392E /* WalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2E9FD1210708FD00BB392E /* WalletViewController.m */; };
 		5D2E9FD52107094000BB392E /* WalletHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2E9FD42107094000BB392E /* WalletHeadView.m */; };
 		5D2E9FD82107097400BB392E /* BilldetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2E9FD72107097400BB392E /* BilldetailCell.m */; };
-		5D2E9FDB2107159800BB392E /* RechargeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D2E9FDA2107159800BB392E /* RechargeViewController.m */; };
 		5D2FEFD42126A670008BC76E /* province.json in Resources */ = {isa = PBXBuildFile; fileRef = 5D2FEFD32126A670008BC76E /* province.json */; };
 		5D3369EE2137EB9B007BC616 /* ThemeTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3369ED2137EB9B007BC616 /* ThemeTimeViewController.m */; };
 		5D33B7B6212D5594004BFD1C /* MoreFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D33B7B5212D5594004BFD1C /* MoreFootView.m */; };
@@ -321,8 +318,6 @@
 		5D54340D20E36D2000DF8310 /* CustomControllers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D54338E20E36D1F00DF8310 /* CustomControllers.m */; };
 		5D54340E20E36D2000DF8310 /* CustomSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D54339020E36D1F00DF8310 /* CustomSegment.m */; };
 		5D54340F20E36D2000DF8310 /* NoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D54339220E36D1F00DF8310 /* NoDataView.m */; };
-		5D54341020E36D2000DF8310 /* AlipaySDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5D54339420E36D1F00DF8310 /* AlipaySDK.bundle */; };
-		5D54341120E36D2000DF8310 /* AlipaySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D54339520E36D1F00DF8310 /* AlipaySDK.framework */; };
 		5D54341220E36D2000DF8310 /* Calculagraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D54339720E36D1F00DF8310 /* Calculagraph.m */; };
 		5D54341320E36D2000DF8310 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D54339920E36D1F00DF8310 /* Config.m */; };
 		5D54341620E36D2000DF8310 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5433A020E36D1F00DF8310 /* HttpClient.m */; };
@@ -405,11 +400,6 @@
 		5D6DDA82218FF7C60011DF12 /* WMContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DDA81218FF7C60011DF12 /* WMContentCell.m */; };
 		5D6DDA85219019050011DF12 /* WMContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D6DDA84219019050011DF12 /* WMContent.m */; };
 		5D70310D22029EDA005978BA /* RechargeProtrolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D70310C22029EDA005978BA /* RechargeProtrolViewController.m */; };
-		5D70311022029F2A005978BA /* RechargeOtherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D70310F22029F2A005978BA /* RechargeOtherViewController.m */; };
-		5D79F4FB213FC8D70038D274 /* ExtractViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D79F4F9213FC8D60038D274 /* ExtractViewController.xib */; };
-		5D79F4FC213FC8D70038D274 /* ExtractViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D79F4FA213FC8D70038D274 /* ExtractViewController.m */; };
-		5D79F503213FD36D0038D274 /* BindZFBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D79F500213FD36B0038D274 /* BindZFBViewController.m */; };
-		5D79F504213FD36D0038D274 /* BindZFBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D79F501213FD36C0038D274 /* BindZFBViewController.xib */; };
 		5D7F0AC0215094C70067650C /* AccoutQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7F0ABF215094C70067650C /* AccoutQuestionViewController.m */; };
 		5D7F0AC32150A9D80067650C /* QuestionScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7F0AC22150A9D80067650C /* QuestionScoreView.m */; };
 		5D7F0AC921522D280067650C /* AppDelegate+PushService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7F0AC621522D280067650C /* AppDelegate+PushService.m */; };
@@ -643,8 +633,6 @@
 		5D11A84921095EA000F500C0 /* ExpertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpertViewController.m; sourceTree = "<group>"; };
 		5D11A84B21096CCE00F500C0 /* SearchExpertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchExpertViewController.h; sourceTree = "<group>"; };
 		5D11A84C21096CCE00F500C0 /* SearchExpertViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchExpertViewController.m; sourceTree = "<group>"; };
-		5D11A84E21098A0400F500C0 /* PayPickView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayPickView.h; sourceTree = "<group>"; };
-		5D11A84F21098A0400F500C0 /* PayPickView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayPickView.m; sourceTree = "<group>"; };
 		5D11A8512109C09D00F500C0 /* ORCertiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ORCertiViewController.h; sourceTree = "<group>"; };
 		5D11A8522109C09D00F500C0 /* ORCertiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ORCertiViewController.m; sourceTree = "<group>"; };
 		5D11A8542109C0B400F500C0 /* GRCertiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GRCertiViewController.h; sourceTree = "<group>"; };
@@ -667,8 +655,6 @@
 		5D1246E4211AFAC700637BD3 /* PayModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayModel.m; sourceTree = "<group>"; };
 		5D1246E6211AFB1400637BD3 /* PayHeadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayHeadView.h; sourceTree = "<group>"; };
 		5D1246E7211AFB1400637BD3 /* PayHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayHeadView.m; sourceTree = "<group>"; };
-		5D12AFDF2147630000D4F00C /* PayTypePickView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayTypePickView.h; sourceTree = "<group>"; };
-		5D12AFE02147630000D4F00C /* PayTypePickView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayTypePickView.m; sourceTree = "<group>"; };
 		5D12AFE321479AAA00D4F00C /* SPDateTimePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPDateTimePickerView.h; sourceTree = "<group>"; };
 		5D12AFE421479AAA00D4F00C /* SPDateTimePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPDateTimePickerView.m; sourceTree = "<group>"; };
 		5D12AFE62147B1D600D4F00C /* BlackFriendCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlackFriendCell.h; sourceTree = "<group>"; };
@@ -823,8 +809,6 @@
 		5D2E9FD42107094000BB392E /* WalletHeadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalletHeadView.m; sourceTree = "<group>"; };
 		5D2E9FD62107097400BB392E /* BilldetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BilldetailCell.h; sourceTree = "<group>"; };
 		5D2E9FD72107097400BB392E /* BilldetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BilldetailCell.m; sourceTree = "<group>"; };
-		5D2E9FD92107159800BB392E /* RechargeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RechargeViewController.h; sourceTree = "<group>"; };
-		5D2E9FDA2107159800BB392E /* RechargeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RechargeViewController.m; sourceTree = "<group>"; };
 		5D2FEFD32126A670008BC76E /* province.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = province.json; sourceTree = "<group>"; };
 		5D3369EC2137EB9B007BC616 /* ThemeTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThemeTimeViewController.h; sourceTree = "<group>"; };
 		5D3369ED2137EB9B007BC616 /* ThemeTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThemeTimeViewController.m; sourceTree = "<group>"; };
@@ -1162,8 +1146,6 @@
 		5D54339020E36D1F00DF8310 /* CustomSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomSegment.m; sourceTree = "<group>"; };
 		5D54339120E36D1F00DF8310 /* NoDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoDataView.h; sourceTree = "<group>"; };
 		5D54339220E36D1F00DF8310 /* NoDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoDataView.m; sourceTree = "<group>"; };
-		5D54339420E36D1F00DF8310 /* AlipaySDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AlipaySDK.bundle; sourceTree = "<group>"; };
-		5D54339520E36D1F00DF8310 /* AlipaySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AlipaySDK.framework; sourceTree = "<group>"; };
 		5D54339620E36D1F00DF8310 /* Calculagraph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculagraph.h; sourceTree = "<group>"; };
 		5D54339720E36D1F00DF8310 /* Calculagraph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculagraph.m; sourceTree = "<group>"; };
 		5D54339820E36D1F00DF8310 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
@@ -1324,14 +1306,6 @@
 		5D6DDA84219019050011DF12 /* WMContent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMContent.m; sourceTree = "<group>"; };
 		5D70310B22029EDA005978BA /* RechargeProtrolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RechargeProtrolViewController.h; sourceTree = "<group>"; };
 		5D70310C22029EDA005978BA /* RechargeProtrolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RechargeProtrolViewController.m; sourceTree = "<group>"; };
-		5D70310E22029F2A005978BA /* RechargeOtherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RechargeOtherViewController.h; sourceTree = "<group>"; };
-		5D70310F22029F2A005978BA /* RechargeOtherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RechargeOtherViewController.m; sourceTree = "<group>"; };
-		5D79F4F8213FC8D50038D274 /* ExtractViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtractViewController.h; sourceTree = "<group>"; };
-		5D79F4F9213FC8D60038D274 /* ExtractViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExtractViewController.xib; sourceTree = "<group>"; };
-		5D79F4FA213FC8D70038D274 /* ExtractViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtractViewController.m; sourceTree = "<group>"; };
-		5D79F500213FD36B0038D274 /* BindZFBViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BindZFBViewController.m; sourceTree = "<group>"; };
-		5D79F501213FD36C0038D274 /* BindZFBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BindZFBViewController.xib; sourceTree = "<group>"; };
-		5D79F502213FD36D0038D274 /* BindZFBViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BindZFBViewController.h; sourceTree = "<group>"; };
 		5D7F0ABE215094C70067650C /* AccoutQuestionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccoutQuestionViewController.h; sourceTree = "<group>"; };
 		5D7F0ABF215094C70067650C /* AccoutQuestionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AccoutQuestionViewController.m; sourceTree = "<group>"; };
 		5D7F0AC12150A9D80067650C /* QuestionScoreView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionScoreView.h; sourceTree = "<group>"; };
@@ -1658,7 +1632,6 @@
 				5D54344120E3762900DF8310 /* CoreMotion.framework in Frameworks */,
 				5D54343F20E3761C00DF8310 /* libsqlite3.0.tbd in Frameworks */,
 				5D54343120E36D2000DF8310 /* libWeChatSDK.a in Frameworks */,
-				5D54341120E36D2000DF8310 /* AlipaySDK.framework in Frameworks */,
 				1B3558FF01CE242C0FFD8B9F /* libPods-LIEBANG.a in Frameworks */,
 				5DA4206021FABA92003A05A3 /* StoreKit.framework in Frameworks */,
 			);
@@ -2440,20 +2413,10 @@
 			children = (
 				5D2E9FD0210708FD00BB392E /* WalletViewController.h */,
 				5D2E9FD1210708FD00BB392E /* WalletViewController.m */,
-				5D2E9FD92107159800BB392E /* RechargeViewController.h */,
-				5D2E9FDA2107159800BB392E /* RechargeViewController.m */,
-				5D79F4F8213FC8D50038D274 /* ExtractViewController.h */,
-				5D79F4FA213FC8D70038D274 /* ExtractViewController.m */,
-				5D79F4F9213FC8D60038D274 /* ExtractViewController.xib */,
-				5D79F502213FD36D0038D274 /* BindZFBViewController.h */,
-				5D79F500213FD36B0038D274 /* BindZFBViewController.m */,
-				5D79F501213FD36C0038D274 /* BindZFBViewController.xib */,
 				5DA4205C21FAAB73003A05A3 /* LBBViewController.h */,
 				5DA4205D21FAAB73003A05A3 /* LBBViewController.m */,
 				5D70310B22029EDA005978BA /* RechargeProtrolViewController.h */,
 				5D70310C22029EDA005978BA /* RechargeProtrolViewController.m */,
-				5D70310E22029F2A005978BA /* RechargeOtherViewController.h */,
-				5D70310F22029F2A005978BA /* RechargeOtherViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -2478,10 +2441,6 @@
 				5D00815E22017CEF0004B98B /* WalletHeadCell.m */,
 				5D2E9FD62107097400BB392E /* BilldetailCell.h */,
 				5D2E9FD72107097400BB392E /* BilldetailCell.m */,
-				5D11A84E21098A0400F500C0 /* PayPickView.h */,
-				5D11A84F21098A0400F500C0 /* PayPickView.m */,
-				5D12AFDF2147630000D4F00C /* PayTypePickView.h */,
-				5D12AFE02147630000D4F00C /* PayTypePickView.m */,
 				5D549E9322003FD80006407A /* LBBHeadView.h */,
 				5D549E9422003FD80006407A /* LBBHeadView.m */,
 				5D549E9622003FE50006407A /* LBBFootView.h */,
@@ -2812,8 +2771,6 @@
 				5D3767E4213CC91B00670611 /* NSString+PinYin */,
 				5D2D22C92114017F00D098FE /* MD5 */,
 				5D114FA821084EFD0054B176 /* TYPagerController */,
-				5D54339420E36D1F00DF8310 /* AlipaySDK.bundle */,
-				5D54339520E36D1F00DF8310 /* AlipaySDK.framework */,
 				5D54339620E36D1F00DF8310 /* Calculagraph.h */,
 				5D54339720E36D1F00DF8310 /* Calculagraph.m */,
 				5D54339820E36D1F00DF8310 /* Config.h */,
@@ -3920,12 +3877,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D79F504213FD36D0038D274 /* BindZFBViewController.xib in Resources */,
 				5D54342A20E36D2000DF8310 /* IQKeyboardManager.bundle in Resources */,
-				5D79F4FB213FC8D70038D274 /* ExtractViewController.xib in Resources */,
 				5D54336920E36C9500DF8310 /* Assets.xcassets in Resources */,
 				7A159FBC2348E4F900B013EC /* city.plist in Resources */,
-				5D54341020E36D2000DF8310 /* AlipaySDK.bundle in Resources */,
 				5D9A2095215A2DC300A9115A /* Main.storyboard in Resources */,
 				5D2FEFD42126A670008BC76E /* province.json in Resources */,
 				5D57B02A2227CFDD00E62F92 /* HMScanner.bundle in Resources */,
@@ -4116,7 +4070,6 @@
 				5D3C6D112124148600DE58E6 /* QuestionOrderModel.m in Sources */,
 				5D57B02B2227CFDD00E62F92 /* HMScanner.m in Sources */,
 				5D34E56E20F743A0002C0165 /* AccountSelfCell.m in Sources */,
-				5D70311022029F2A005978BA /* RechargeOtherViewController.m in Sources */,
 				5D3AC0D6210B08F9008CA4BF /* CouponService.m in Sources */,
 				5D54343C20E36D2000DF8310 /* UIImage+Addition.m in Sources */,
 				7A8962EA2385671C00D78E37 /* PayViewController.m in Sources */,
@@ -4129,7 +4082,6 @@
 				5D52D5B820EEFEFE00BFABE5 /* MyFriendViewController.m in Sources */,
 				5D9F6487217DAC5500A520E3 /* WMCardMessage.m in Sources */,
 				5D54343D20E36D2000DF8310 /* UIView+Frame.m in Sources */,
-				5D2E9FDB2107159800BB392E /* RechargeViewController.m in Sources */,
 				5D67C22221C265E10081DD45 /* MosaicModel.m in Sources */,
 				5D54342720E36D2000DF8310 /* IQTitleBarButtonItem.m in Sources */,
 				7A159FBE2348E4F900B013EC /* UIButton+CZHExtension.m in Sources */,
@@ -4165,7 +4117,6 @@
 				5D2A6691212FD9710053974A /* ApplySuccessViewController.m in Sources */,
 				5D2E1F4E21D633FA005CFCBD /* CompanyFeeModel.m in Sources */,
 				5D4153DF213A2C4A0053C8C4 /* WalletListModel.m in Sources */,
-				5D11A85021098A0400F500C0 /* PayPickView.m in Sources */,
 				DE2B74E02132DBC5007D2CD5 /* YYTextTransaction.m in Sources */,
 				5D1150072108778D0054B176 /* SearchFriendViewController.m in Sources */,
 				DE2B74DD2132DBC5007D2CD5 /* UIPasteboard+YYText.m in Sources */,
@@ -4331,8 +4282,6 @@
 				5D1150082108778D0054B176 /* SearchQuestionViewController.m in Sources */,
 				5D2E95B5213EB76200D5442E /* ThemeMessageViewController.m in Sources */,
 				5D398C8D2101C212008DCF82 /* OrderQuestionCell.m in Sources */,
-				5D79F503213FD36D0038D274 /* BindZFBViewController.m in Sources */,
-				5D12AFE12147630000D4F00C /* PayTypePickView.m in Sources */,
 				5D400FC2211BE39600351B78 /* CommentPickView.m in Sources */,
 				DE9D4F9D2129AF9200DCD9F6 /* ZJChooseOneRightCell.m in Sources */,
 				5D3767ED213D362200670611 /* PostAnswerViewController.m in Sources */,
@@ -4471,7 +4420,6 @@
 				5D7F0ACA21522D280067650C /* AppDelegate.m in Sources */,
 				5D63390C21E8383D000A0704 /* WMCompanyMessage.m in Sources */,
 				5DA4205421F991E5003A05A3 /* UIImage+CropRotate.m in Sources */,
-				5D79F4FC213FC8D70038D274 /* ExtractViewController.m in Sources */,
 				5D3849F22223F7D70070C174 /* HXDatePhotoEditViewController.m in Sources */,
 				5D50384020EE110B00278011 /* FriendCell.m in Sources */,
 				5D63390F21E8386C000A0704 /* WMCompanyCell.m in Sources */,
@@ -4633,7 +4581,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 07;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = 4WQQYCTJ6G;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4653,7 +4601,7 @@
 					"$(PROJECT_DIR)/LIEBANG/Helper/share_ios_6.9.4/SocialLibraries/Sina",
 					"$(PROJECT_DIR)/LIEBANG/Helper/share_ios_6.9.4/SocialLibraries/WeChat",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yiqi.LIEBANG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -4675,7 +4623,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 07;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = 4WQQYCTJ6G;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -4695,7 +4643,7 @@
 					"$(PROJECT_DIR)/LIEBANG/Helper/share_ios_6.9.4/SocialLibraries/Sina",
 					"$(PROJECT_DIR)/LIEBANG/Helper/share_ios_6.9.4/SocialLibraries/WeChat",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yiqi.LIEBANG;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

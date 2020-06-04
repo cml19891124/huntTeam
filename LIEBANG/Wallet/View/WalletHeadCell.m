@@ -49,21 +49,6 @@
     _indexPath = indexPath;
     
     if (indexPath.section == 0) {
-        
-        NSString *allString = [NSString stringWithFormat:@"余额 %.2f",[[Config currentConfig].balanceAmount floatValue]];
-        
-        NSMutableAttributedString *text = [NSMutableAttributedString new];
-        [text appendAttributedString:[[NSAttributedString alloc] initWithString:allString attributes:nil]];
-        text.yy_color = kLBThreeColor;
-        text.yy_font = kSystemBold(16);
-        [text yy_setFont:kSystem(15) range:[allString rangeOfString:@"余额"]];
-        [text yy_setColor:kBlackColor range:[allString rangeOfString:@"余额"]];
-        self.balanceLabel.attributedText = text;
-        
-        [self.sureButton setTitle:@"提现" forState:UIControlStateNormal];
-        self.markImageView.image = [UIImage imageNamed:@"renmingbi"];
-    }
-    else if (indexPath.section == 1) {
         NSString *allString = [NSString stringWithFormat:@"猎帮币余额 %.2f\n此余额只能在iOS客户端使用，不可提现",[[Config currentConfig].liebangCurrency floatValue]];
         
         NSMutableAttributedString *text = [NSMutableAttributedString new];
@@ -82,11 +67,6 @@
 
 - (void)sureButtonClick {
     if (self.indexPath.section == 0) {
-        if (_forwardButtonBlock) {
-            _forwardButtonBlock();
-        }
-    }
-    else if (self.indexPath.section == 1) {
         if (_rechargeButtonBlock) {
             _rechargeButtonBlock();
         }

@@ -93,7 +93,7 @@
         _titleLabel.hidden = YES;
         _titleIcon.hidden = YES;
         _selectButton.hidden = YES;
-        _titleLabel.text = @"支付宝";
+//        _titleLabel.text = @"支付宝";
         _titleIcon.image = [UIImage imageNamed:@"list_icon_zhifubao"];
     }
     else if (indexPath.row == 1)
@@ -104,7 +104,7 @@
         _titleLabel.hidden = YES;
         _titleIcon.hidden = YES;
         _selectButton.hidden = YES;
-        _titleLabel.text = @"微信支付";
+//        _titleLabel.text = @"微信支付";
         _titleIcon.image = [UIImage imageNamed:@"list_icon_weixinzhifu"];
         
     }

@@ -187,7 +187,7 @@ typedef void (^SNBasicBlock)(void);
 #import <WebKit/WebKit.h>
 #import <QiniuSDK.h>
 #import "YYModel.h"
-#import <AlipaySDK/AlipaySDK.h>
+
 #import "WechatSDK1.8.2/WXApi.h"
 #import "WXApiManager.h"
 #import "RegexManager.h"

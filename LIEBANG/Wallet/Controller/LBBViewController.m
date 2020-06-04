@@ -8,7 +8,7 @@
 
 #import "LBBViewController.h"
 #import "UserHelpViewController.h"
-#import "RechargeOtherViewController.h"
+
 #import "RMStore.h"
 #import "WalletService.h"
 #import "LBBFootView.h"
@@ -108,7 +108,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellStr];
     }
-    cell.textLabel.text = @"如何在APP Store绑定支付宝/微信？";
+
     cell.textLabel.textColor = kLBNineColor;
     cell.textLabel.font = kSystem(12);
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -116,14 +116,12 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return kCurrentWidth(40);
+    return kCurrentWidth(0);
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    RechargeOtherViewController *nextCtr = [[RechargeOtherViewController alloc] init];
-    [self.navigationController pushViewController:nextCtr animated:YES];
+
 }
 
 #pragma mark Event
